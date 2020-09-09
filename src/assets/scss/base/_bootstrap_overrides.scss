@@ -1,0 +1,31 @@
+@media screen and (max-width: 992px) {
+  .h-0 {
+    height: 0;
+  }
+}
+
+#page {
+  min-height: 100vh;
+}
+
+.site-main {
+  flex: 1; /* takes the remaining height of the "container" div */
+  overflow: auto; /* to scroll just the "main" div */
+}
+
+// Fonts
+$enable-responsive-font-sizes: true;
+
+// Grid
+$global-width: 1200 !default;
+$grid-gutter-width: 40px;
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  xxl: 1620px
+) !default;
+
+.btn {
+  border-radius: 3px!important;
+  padding: 0.6em 1em 0.4em;
+}

@@ -1,0 +1,249 @@
+.single-product {
+
+	div.product {
+		position: relative;
+
+		h1 {
+			margin: 0;
+		}
+
+		.onsale {
+			background-color: #131313;
+			border-radius: 3px;
+			color: #fff;
+			display: inline-block;
+			font-weight: 400;
+			font-size: .85rem;
+			height: 32px;
+			left: 16px;
+			position: absolute;
+			padding: 3px 12px;
+			right: 0;
+			top: 32px;
+			width: 60px;
+			z-index: 10;
+		}
+
+		.price {
+			font-size: 1.3rem;
+			margin: 0;
+		}
+
+		form.cart {
+			display: flex;
+			margin-bottom: 16px;
+		}
+
+		.woocommerce div.product form.cart div.quantity {
+		    margin: 0 4px 0 0;
+		}
+
+		button {
+			background: #131313;
+			color: #fff;
+			margin-left: 15px;
+		}
+
+		.woocommerce-product-gallery {
+			position: relative;
+			float: left;
+			width: 48%;
+
+			.woocommerce-product-gallery__trigger {
+				position: absolute;
+				top: 1em;
+				right: .5em;
+				font-size: 2em;
+				z-index: 9;
+				width: 36px;
+				height: 36px;
+				background: #fff;
+				text-indent: -9999px;
+				border-radius: 100%;
+				box-sizing: content-box;
+			}
+
+			.woocommerce-product-gallery__trigger::before {
+		    content: "";
+		    display: block;
+		    width: 10px;
+		    height: 10px;
+		    border: 2px solid #000;
+		    border-radius: 100%;
+		    position: absolute;
+		    top: 9px;
+		    left: 9px;
+		    box-sizing: content-box;
+			}
+
+			.woocommerce-product-gallery__trigger::after {
+		    content: "";
+		    display: block;
+		    width: 2px;
+		    height: 8px;
+		    background: #000;
+		    border-radius: 6px;
+		    position: absolute;
+		    top: 19px;
+		    left: 22px;
+		    -webkit-transform: rotate(-45deg);
+		    -ms-transform: rotate(-45deg);
+		    transform: rotate(-45deg);
+		    box-sizing: content-box;
+			}
+
+			.flex-viewport {
+				margin-bottom: 1em;
+			}
+
+			.flex-control-thumbs {
+				margin: 0;
+				padding: 0;
+
+				li {
+					list-style: none;
+					cursor: pointer;
+					float: left;
+
+					img {
+						opacity: 0.5;
+
+						&.flex-active {
+							opacity: 1;
+						}
+					}
+
+					&:hover {
+
+						img {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			@for $i from 2 through 5 {
+
+				&.woocommerce-product-gallery--columns-#{$i} {
+
+					.flex-control-thumbs {
+
+						li {
+
+							@include column-width($i);
+
+							&:nth-child(#{$i}n) {
+								margin-right: 0;
+							}
+
+							&:nth-child(#{$i}n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.stock {
+
+	&:empty::before {
+		display: none;
+	}
+
+	&.in-stock {
+		color: $woocommerce__color-success;
+	}
+
+	&.out-of-stock {
+		color: $woocommerce__color-error;
+	}
+}
+
+// Product image container
+.woocommerce div.product div.summary,
+.woocommerce-page div.product div.summary {
+	float: none;
+	width: 100%;
+}
+
+// Product image
+.single-product div.product .woocommerce-product-gallery {
+	width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+
+	// Product info right
+	.woocommerce div.product div.summary,
+	.woocommerce-page div.product div.summary {
+	  float: right;
+	  width: 48%;
+	}
+
+	// Product image
+	.single-product div.product .woocommerce-product-gallery {
+	width: 48%;
+	}
+}
+
+/**
+ * Product image
+ */
+
+.woocommerce-product-gallery__image {
+	position: relative;
+	overflow: hidden;
+}
+
+.woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
+	img {
+		width: 100%;
+	}
+}
+
+/**
+ * Product tab attributes
+ */
+
+.woocommerce table.shop_attributes {
+  border: 0;
+  border-top-color: currentcolor;
+  border-top-style: none;
+  border-top-width: 0px;
+  border-top: 1px dotted rgba(0,0,0,.1);
+  margin-bottom: 1.618em;
+  width: 100%;
+}
+
+.woocommerce table.shop_attributes th {
+  width: 150px;
+  font-weight: 700;
+  padding: 8px;
+  border-top: 0;
+  border-bottom: 1px dotted rgba(0,0,0,.1);
+  margin: 0;
+  line-height: 1.5;
+	text-align: left;
+	text-transform: capitalize;
+}
+
+.woocommerce table.shop_attributes td p {
+  margin: 0;
+  padding: 8px 0;
+}
+
+.woocommerce table.shop_attributes td p {
+    margin: 0;
+    padding: 8px 0;
+}
+
+.product_meta > span {
+	display: block;
+}
+
+.related.products > h2 {
+	font-family: $font__main;
+}

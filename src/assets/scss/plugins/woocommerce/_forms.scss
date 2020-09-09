@@ -1,0 +1,32 @@
+/**
+ * Product comment form
+ */
+
+.woocommerce #review_form #respond textarea {
+  box-sizing: border-box;
+  width: 100%;
+}
+.woocommerce #reviews #comment {
+  height: 75px;
+}
+
+#commentform #author,
+#commentform #comment,
+#commentform #email,
+#commentform #url {
+  background: #f1f1f1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  color: #484848;
+  padding: 0.8rem 1rem;
+  width: 100%;
+}
+
+button[type="submit"],
+input[type="submit"] {
+  background: #131313;
+  color: #fff;
+  padding: 12px;
+}

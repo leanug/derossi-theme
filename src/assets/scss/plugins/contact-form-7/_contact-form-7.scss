@@ -1,0 +1,46 @@
+/**
+ * Contact form 7
+ *
+ * @package WordPress
+ * @subpackage _themename
+ * @since 1.0.0
+ */
+
+ .wpcf7 label {
+   width: 100%;
+   color: #999999;
+   font-weight: bold;
+   font-size: .8rem;
+ }
+
+ .wpcf7 label input, textarea {
+   font-size: 1rem;
+ }
+
+ .wpcf7-text,
+ .wpcf7-textarea {
+   //background-color: $theme-color-4;
+   border: none;
+   //border-radius: $border-radius;
+   margin-top: 10px;
+   padding: 12px 15px 12px 12px;
+   width: 100%;
+ }
+
+ .wpcf7-textarea {
+   height: 150px;
+ }
+
+ .wpcf7-submit {
+   background-color: none;
+   border: none;
+   //border-radius: $border-radius;
+   //color: $theme-color-5;
+   padding: 6px 30px;
+   transition: background-color 0.5s, color 0.5s;
+ }
+
+ .wpcf7-submit:hover {
+   //background-color: darken($theme-color-2, 5%);
+   border: none;
+ }

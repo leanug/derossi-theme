@@ -1,0 +1,163 @@
+@media screen and (min-width: 768px) {
+
+	.col2-set {
+
+		.form-row-first {
+			float: left;
+			margin-right: $columns__margin;
+		}
+
+		.form-row-last {
+			float: right;
+			margin-right: 0;
+		}
+
+		.form-row-first,
+		.form-row-last {
+
+			@include column-width(2);
+		}
+	}
+}
+
+.woocommerce {
+
+	table.shop_table {
+		background-color: #f6f6f6;
+		border-collapse: collapse;
+	}
+
+	.woocommerce-cart-form table.shop_table {
+		border-collapse: separate;
+		border-radius: 5px;
+		margin: 0 -1px 24px 0;
+		padding: 20px;
+		text-align: left;
+		width: 100%;
+	}
+
+	table {
+		border-collapse: collapse;
+	}
+
+	.woocommerce-checkout-review-order {
+
+		.woocommerce-checkout-review-order table {
+		    table-layout: fixed;
+		}
+
+		table.shop_table thead {
+	    background-color: #023358;
+	    color: #fff;
+		}
+
+		*, ::before, ::after {
+		    box-sizing: border-box;
+		}
+
+		table.shop_table {
+		    border-collapse: collapse;
+				text-align: left;
+		}
+
+		table.shop_table td {
+	    border-top: 1px solid rgba(0,0,0,.1);
+	    border-bottom: 1px solid rgba(0,0,0,.1);
+	    padding: 9px 12px;
+	    vertical-align: middle;
+	    line-height: 1.5em;
+		}
+
+		table.shop_table th {
+			border-top: 1px solid rgba(0,0,0,.1);
+	    border-bottom: 1px solid rgba(0,0,0,.1);
+	    font-weight: 700;
+			line-height: 1.5em;
+	    padding: 9px 12px;
+		}
+	}
+
+	// Payment
+	.woocommerce-checkout #payment {
+		background: #ebe9eb;
+		border-radius: 5px;
+
+		// Payment / Bank Transfer
+		ul.payment_methods {
+		  text-align: left;
+		  padding: 1em;
+		  border-bottom: 1px solid #d3ced2;
+		  margin: 0;
+		  list-style: none outside;
+		}
+
+		div.payment_box {
+			position: relative;
+			box-sizing: border-box;
+			width: 100%;
+			padding: 1em;
+			margin: 1em 0;
+			font-size: .92em;
+			border-radius: 2px;
+			line-height: 1.5;
+			background-color: #dfdcde;
+			color: #515151;
+		}
+
+		// Littel triangle for rectangle under direct bank transfer, paypal and
+		// payment methods
+		div.payment_box::before {
+			content: "";
+			display: block;
+			border: 1em solid #dfdcde;
+	    border-top-color: rgb(223, 220, 222);
+	    border-right-color: rgb(223, 220, 222);
+	    border-left-color: rgb(223, 220, 222);
+			border-right-color: transparent;
+			border-left-color: transparent;
+			border-top-color: transparent;
+			position: absolute;
+			top: -.75em;
+			left: 0;
+			margin: -1em 0 0 2em;
+		}
+
+		ul.payment_methods li {
+	    line-height: 2;
+	    text-align: left;
+	    font-weight: 400;
+		}
+
+		ul.payment_methods li input {
+		  margin: 0 1em 0 0;
+		}
+
+		ul.payment_methods li img {
+	    vertical-align: middle;
+	    margin: -2px 0 0 .5em;
+			max-height: 52px;
+	    padding: 0;
+	    position: relative;
+	    box-shadow: none;
+		}
+
+		.payment_method_paypal .about_paypal {
+			color: #007bff;
+			background-color: transparent;
+	    float: right;
+	    font-size: .83em;
+			margin-left: 15px;
+			text-decoration: none;
+		}
+
+		.form-row.place-order {
+			padding: 1em;
+			display: block;
+			overflow: hidden;
+
+			#place_order {
+				float: right;
+			}
+		}
+	}
+}
