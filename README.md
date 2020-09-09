@@ -8,7 +8,7 @@ It's an Organic Kombucha store.
 
 Made with [underscores](https://underscores.me/)
 
-![WordPress Portfolio](https://raw.githubusercontent.com/leanug/portfolio/portfolio/screenshot.png)
+![WordPress Portfolio](https://github.com/leanug/derossi-theme/blob/master/screenshot.png)
 
 
 ## Instructions
