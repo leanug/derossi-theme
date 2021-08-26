@@ -2,11 +2,7 @@
 
 # De Rossi WordPress eCommerce Theme
 
-
-This is a personal project to showcase on my portfolio.
-It's an Organic Kombucha store.
-
-[Visit the site](https://www.derossi.website/)
+Personal project. It's an Organic Kombucha woocommerce store.
 
 Made with [underscores](https://underscores.me/)
 
@@ -15,7 +11,7 @@ Made with [underscores](https://underscores.me/)
 
 ## Instructions
 
-Install dependences:
+Install dependencies:
 
 ```shell
 npm install
